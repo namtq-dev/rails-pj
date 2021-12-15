@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card">
+  <div class="card-header">
+    <h2>Blogs</h2>
+  </div>
+  <div class="card-body">
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Sport</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @blogs.each do |blog| %>
+          <tr>
+            <td><%= blog.title %></td>
+            <td class="text-truncate" style="max-width: 150px;"><%= blog.content %></td>
+            <td><%= blog.sport %></td>
+            <td>
+              <%= link_to 'Show', blog, class:"btn btn-primary" %>
+              <%= link_to 'Edit', edit_blog_path(blog), class:"btn btn-info" %>
+              <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Blog', new_blog_path %>
+  </div>
+</div>

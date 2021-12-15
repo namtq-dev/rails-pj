@@ -1,3 +1,21 @@
 <h1>スポーツのレビュー</h1>
 <%= link_to "ニュース一覧をみる", sports_path %>
 
+<br /><br />
+
+<div class="row">
+<% @blogs.each do |blog| %>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <%= blog.sport %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= blog.title %></h5>
+        <p class="text-truncate card-text" style="max-width: 600px;"><%= blog.content %></p>
+        <%= link_to "Show", blog_path(blog) , class: "btn btn-secondary"%>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
