@@ -1,0 +1,23 @@
+<div class="row">
+    <% @cats.each do |cat| %>
+    <div class="col-12">
+        <h1 style="text-align:center;"><%= cat.title %></h1>
+        <hr />
+    </div>
+
+    <% @products.each do |product| %>
+    <% if product.category == cat %>
+    <div class="col-4">
+        <h5>
+            <%= product.name %>
+        </h5>
+        <p>
+        <%= product.detail %> <br>
+        <%= product.price %>$ <br>
+        <%= link_to 'View', product %>
+        </p>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+</div>

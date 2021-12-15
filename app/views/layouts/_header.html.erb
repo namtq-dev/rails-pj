@@ -1,7 +1,7 @@
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-3 fg ">
-         <%= link_to "カテゴリー" , root_path, class:"nav-link nav-item active text-white" %>
-        <%= link_to "製品" , root_path, class:"nav-link nav-item active text-white" %>
+         <%= link_to "カテゴリー" , categories_path, class:"nav-link nav-item active text-white" %>
+        <%= link_to "製品" , menu_path, class:"nav-link nav-item active text-white" %>
         <%= link_to  "ホーム", root_path, class: "nav-item nav-link active text-white"%>
            <% if user_signed_in? %>
            <%= link_to "ログアウト",destroy_user_session_path,  :method => :delete, class: "nav-item nav-link active text-white" %>
@@ -20,8 +20,8 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <div class="navbar-nav">
-            <%= link_to "カテゴリー" , root_path, class:"nav-link nav-item active" %>
-            <%= link_to "製品" , root_path, class:"nav-link nav-item active" %>
+            <%= link_to "カテゴリー" , categories_path, class:"nav-link nav-item active" %>
+            <%= link_to "製品" , menu_path, class:"nav-link nav-item active" %>
             <%= link_to "ニューブログ" , blogs_path, class:"nav-link nav-item active" %>
         </div>
         

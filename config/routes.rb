@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :categories
+  get 'menu', to: 'menu#index'
+  resources :products
   resources :blogs
   get 'users/show'
   root 'static_pages#home'
