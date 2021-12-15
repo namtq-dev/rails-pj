@@ -1,19 +1,14 @@
 <h1>プロフィール</h1>
 
 <% if @user.avatar.attached? %>
-    <%= image_tag @user.avatar %>
+    <%= image_tag @user.avatar, class:"img-thumbnail",width:"200",height:"200" %>
 <% end %>
 
-<h3>名前</h3>
-<%= @user.first_name %> <%= @user.last_name%> 
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><h3>名前</h3> <%= @user.first_name %> <%= @user.last_name%> </li>
+  <li class="list-group-item"><h3>年齢</h3> <%= @user.age %></li>
+  <li class="list-group-item"><h3>スポーツ</h3> <%= @user.favorite_sport %></li>
+  <li class="list-group-item"><h3>メールアドレス</h3> <%= @user.email %>  </li>
+  <li class="list-group-item"><%= link_to "プロフィール変更", edit_user_registration_path %></li>
+</ul>
 
-<h3>年齢</h3>
-<%= @user.age %>
-
-<h3>スポーツ</h3>
-<%= @user.favorite_sport %>
-
-<h3>メールアドレス</h3>
-<%= @user.email %>  
-
-<%= link_to "プロフィール変更", edit_user_registration_path %>
