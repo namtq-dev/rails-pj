@@ -2,7 +2,7 @@
 
 <h1>Products</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -20,7 +20,7 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.name %></td>
+        <th><%= product.name %></th>
         <td><%= product.detail %></td>
         <td><%= product.price %></td>
         <td><%= product.inside %></td>
