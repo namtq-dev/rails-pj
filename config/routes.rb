@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :product_reviews
   resources :categories
   get 'menu', to: 'menu#index'
   resources :products
