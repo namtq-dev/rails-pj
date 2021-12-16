@@ -53,7 +53,7 @@
 
   <div class="field">
     <%= form.label :category %>
-    <%= form.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @product.category.id) %>
+    <%= form.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @product.category_id) %>
   </div>  
 
   <div class="field">
